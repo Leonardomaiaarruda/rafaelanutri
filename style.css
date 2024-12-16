@@ -135,6 +135,16 @@ button:hover {
 }
 
 @media (max-width: 480px) {
+    .close {
+        position: relative;
+        top: -10px;
+        left: 170px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #000000;
+    }
+}
+@media (max-width: 480px) {
     .container {
         padding: 20px;
     }
@@ -150,4 +160,5 @@ button:hover {
         font-size: 0.9rem;
         padding: 10px;
     }
+    
 }
