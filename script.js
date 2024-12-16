@@ -1,4 +1,19 @@
-TMB = 655.1 + (9.563 * peso) + (1.850 * altura) - (4.676 * idade)
+const heightInput = document.getElementById('height');
+const errorMessage = document.getElementById('error-message');
+
+heightInput.addEventListener('input', function(event) {
+    // Verifica se o valor contém vírgula ou ponto
+    if (/[.,]/.test(this.value)) {
+        // Exibe a mensagem de erro
+        errorMessage.style.display = 'block';
+    } else {
+        // Esconde a mensagem de erro caso não haja vírgula ou ponto
+        errorMessage.style.display = 'none';
+    }
+
+    // Remove qualquer vírgula ou ponto do valor digitado
+    this.value = this.value.replace(/[.,]/g, '');
+});
 
 const form = document.getElementById('tmbForm');
 const resultDiv = document.getElementById('result');
@@ -27,7 +42,7 @@ form.addEventListener('submit', function(event) {
     const adjustedTMB = tmb * activityLevel;
 
     // Exibe o resultado no modal
-    modalResult.textContent = `Suya necessidade de calorias diariamente é de ${adjustedTMB.toFixed(2)} kcal/dia.`;
+    modalResult.textContent = `Sua necessidade de calorias diárias é de ${adjustedTMB.toFixed(2)} kcal/dia.`;
     modal.style.display = 'flex';
 });
 
@@ -36,5 +51,5 @@ closeModal.addEventListener('click', function() {
 });
 
 purchaseButton.addEventListener('click', function() {
-    window.location.href = 'https://wa.me/5544988057085?text=Ol%C3%A1%2Cgostaria%20de%20saber%20mais%20sobre%20o%20cardapio%20personalizado';
+    window.location.href = 'https://wa.me/5544988057085?text=ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20cardio%20personalizado';
 });

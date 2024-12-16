@@ -13,13 +13,14 @@
         <h2>Calculadora de TMB</h2>
         <form id="tmbForm">
             <label for="weight">Peso (kg):</label>
-            <input type="number" id="weight" placeholder="Ex: 60,5" required>
+            <input  id="weight" placeholder="Ex: 60,0" required>
 
             <label for="height">Altura (cm):</label>
-            <input type="number" id="height" placeholder="Ex: 160" required>
+            <input  id="height" placeholder="Ex: 160" required>
+            <p id="error-message" style="color: red; display: none;">Por favor, insira a altura sem vírgula e sem ponto.</p>
 
             <label for="age">Idade:</label>
-            <input type="number" id="age" placeholder="Ex: 30" required>
+            <input type="number" id="age" placeholder="Ex: 27" required>
 
             <label for="activity">Nível de Atividade Física:</label>
             <select id="activity" required>
@@ -40,7 +41,7 @@
             <span class="close" id="closeModal">&times;</span>
             <h2>Resultado da TMB</h2>
             <p id="modalResult"></p>
-            <p>Com base na sua TMB, recomendamos uma tabela nutricional personalizada.</p>
+            <p>A partir de sua necessidade de calorias diárias recomendamos cardápios personalizados para ganho de massa muscular e cardápios para emagrecimento</p>
             <button id="purchaseButton">Saber mais</button>
         </div>
     </div>
